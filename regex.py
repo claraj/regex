@@ -38,7 +38,7 @@ regex = '[abc]{2}'   # Match letter a or b or c twice in a row - so 'aa' or 'bb'
 text = 'this string should actually have a match'      # Even though this string has several matches, only the first match will be returned. Others will be ignored
 match = re.search(regex, text)
 if match:
-    print('match: ', match.group())   # group() default value is 0. Prints a
+    print('match: ', match.group())   # group() default value is 0. Prints ac
     # Can find the positions in the string that the regex pattern matches
     print(match.start(), match.end(), match.span())  # 19, 21, (19, 21)  The position the match started and ended, span is a tuple of both values
 
@@ -82,7 +82,7 @@ print(match, test_string_7)
 
 ##### findall
 print('re.findall() finds all matching strings for the regex pattern, and returns a list of those strings')
-# findall returns a list of matching, non-overapping, strings
+# findall returns a list of matching, non-overlapping, strings
 match_strings = re.findall(regex, test_string_7)
 print(match_strings)
 for code in match_strings:
